@@ -8,6 +8,9 @@
 
   h1 {
     font-size: 50px;
+    @include phone {
+      font-size: 20px;
+    }
   }
 
   ul {
@@ -15,6 +18,11 @@
     padding: 0;
     list-style: none;
     display: flex;
+    @include phone {
+      flex-wrap: wrap;
+      margin: 10px;
+      justify-content: center;
+    }
   }
 
   .container {
@@ -23,6 +31,9 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    @include phone {
+      width: 100%;
+    }
 
     .item {
       width: 220px;
@@ -37,6 +48,10 @@
       position: relative;
       transition: all 0.5s ease;
       cursor: pointer;
+      @include phone {
+        width: 130px;
+        height: 100px;
+      }
 
       h3 {
         position: absolute;

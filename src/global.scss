@@ -1,1 +1,8 @@
 $mainColor: #15023a;
+
+$width: 768px;
+@mixin phone {
+  @media (max-width: $width) {
+    @content;
+  }
+}

@@ -1,13 +1,20 @@
+@import "../../global.scss";
 .works {
   background-color: crimson;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  @include phone {
+    overflow: hidden;
+  }
   .arrow {
     height: 50px;
     position: absolute;
     cursor: pointer;
+    @include phone {
+      display: none;
+    }
     &.left {
       left: 100px;
       transform: rotateY(180deg);
@@ -24,6 +31,11 @@
     position: absolute;
     left: 0;
     transition: all 1s ease-out;
+    @include phone {
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     .container {
       width: 100vw;
@@ -39,6 +51,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include phone {
+          width: 80%;
+          height: 150px;
+          margin: 15px 0;
+        }
         .left {
           flex: 4;
           height: 80%;
@@ -58,15 +75,28 @@
               display: flex;
               align-items: center;
               justify-content: center;
+              @include phone {
+                width: 20px;
+                height: 20px;
+              }
               img {
                 width: 25px;
+                @include phone {
+                  width: 15px;
+                }
               }
             }
             h2 {
               font-size: 20px;
+              @include phone {
+                font-size: 13px;
+              }
             }
             p {
               font-size: 13px;
+              @include phone {
+                display: none;
+              }
             }
             span {
               font-size: 12px;
